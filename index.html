@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>SUST CSE — Batch 25 Orientation Portal</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+  <div id="film-fade"></div>
+  <canvas id="code-rain"></canvas>
+
+  <!-- SCREEN 1: LOGO -->
+  <div class="screen active" id="s1">
+    <div class="logo-ring">
+      <div class="logo-inner">
+        <div class="logo-cse">CSE</div>
+        <div class="logo-sust">SUST</div>
+      </div>
+    </div>
+    <div class="s1-dept">Department of Computer Science & Engineering</div>
+    <div class="s1-title">Shahjalal University of Science & Technology</div>
+    <div class="s1-tap">Tap anywhere to begin</div>
+  </div>
+
+  <!-- SCREEN 2: CONGRATULATIONS -->
+  <div class="screen" id="s2">
+    <div class="confetti-wrap" id="confetti-wrap"></div>
+    <div class="congrats-label">// Class of 2025</div>
+    <div class="congrats-name" id="junior-name-display"></div>
+    <h1 class="congrats-h1">Congratulations,<br>Batch 25!</h1>
+    <div class="congrats-sub">You are now part of SUST CSE family</div>
+    <button type="button" class="congrats-btn" id="btn-to-letters">Read letters from your seniors →</button>
+  </div>
+
+  <!-- SCREEN 3: LETTERS -->
+  <div class="screen" id="s3">
+    <div class="letter-wrap">
+      <div class="letter-progress" id="letter-progress">Letter 1 of 10</div>
+      <div class="letters-viewport">
+        <div id="letters-track"></div>
+      </div>
+      <div class="letter-nav">
+        <button type="button" class="lnav-btn" id="letter-prev">← Prev</button>
+        <div class="lnav-dots" id="letters-dots"></div>
+        <button type="button" class="lnav-btn" id="letter-next">Next →</button>
+      </div>
+      <div class="letter-nav-cta">
+        <button type="button" class="letter-next-section" id="btn-to-connect">Connect with your seniors →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 4: CONNECT -->
+  <div class="screen" id="s4">
+    <div class="s4-header">
+      <div>
+        <div class="s4-title">// Connect your senior</div>
+        <div class="s4-count" id="senior-count">100 seniors · SUST CSE</div>
+      </div>
+      <div class="view-toggle">
+        <button type="button" class="vt-btn" id="vt-dir">Directory</button>
+        <button type="button" class="vt-btn on" id="vt-map">Map</button>
+      </div>
+    </div>
+    <div class="s4-body">
+      <div class="search-bar" id="search-bar" style="display:none">
+        <input class="search-input" id="search-input" placeholder="Search by name, reg, or district...">
+        <div class="district-select" data-district-select>
+          <select class="filter-sel native-select" id="district-filter" aria-label="Filter by district"
+            aria-hidden="true" tabindex="-1">
+            <option value="">All districts</option>
+          </select>
+          <button type="button" class="district-select-trigger" id="district-filter-trigger" aria-haspopup="listbox"
+            aria-expanded="false" aria-controls="district-filter-menu">
+            <span id="district-filter-label">All districts</span>
+            <span class="district-select-icon" aria-hidden="true"></span>
+          </button>
+          <div class="district-select-menu" id="district-filter-menu" role="listbox"
+            aria-labelledby="district-filter-trigger"></div>
+        </div>
+      </div>
+      <div id="dir-view"></div>
+      <div id="map-view">
+        <svg id="bd-svg" viewBox="0 0 520 560" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="map-tooltip" id="map-tooltip"></div>
+        <div class="map-panel" id="map-panel">
+          <div class="mp-header">
+            <div class="mp-dist" id="mp-dist-label">—</div>
+            <button type="button" class="mp-close" aria-label="Close">✕</button>
+          </div>
+          <div id="mp-cards"></div>
+        </div>
+      </div>
+    </div>
+    <div class="senior-modal" id="senior-modal" aria-hidden="true">
+      <button type="button" class="senior-modal-backdrop" data-close-senior aria-label="Close details"></button>
+      <section class="senior-detail" role="dialog" aria-modal="true" aria-labelledby="sd-name">
+        <button type="button" class="sd-close" data-close-senior aria-label="Close details">x</button>
+        <div class="sd-head">
+          <div class="sd-avatar" id="sd-avatar"></div>
+          <div class="sd-title-block">
+            <div class="sd-kicker">// Senior contact</div>
+            <h2 class="sd-name" id="sd-name"></h2>
+            <div class="sd-nick" id="sd-nick"></div>
+          </div>
+        </div>
+        <div class="sd-grid">
+          <div class="sd-field">
+            <span class="sd-label">District</span>
+            <span class="sd-value" id="sd-district"></span>
+          </div>
+          <div class="sd-field">
+            <span class="sd-label">Reg</span>
+            <span class="sd-value" id="sd-reg"></span>
+          </div>
+          <div class="sd-field sd-wide">
+            <span class="sd-label">Phone</span>
+            <a class="sd-value sd-link" id="sd-phone"></a>
+          </div>
+          <div class="sd-field sd-wide">
+            <span class="sd-label">Email</span>
+            <a class="sd-value sd-link" id="sd-email"></a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <nav class="bottom-nav" aria-label="Screens">
+      <button type="button" class="bnav-dot" data-goto="s1" title="Logo"></button>
+      <button type="button" class="bnav-dot" data-goto="s2" title="Congrats"></button>
+      <button type="button" class="bnav-dot" data-goto="s3" title="Letters"></button>
+      <button type="button" class="bnav-dot on" data-goto="s4" title="Connect"></button>
+    </nav>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
