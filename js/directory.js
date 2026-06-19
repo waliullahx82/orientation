@@ -1,14 +1,28 @@
 import { SENIORS } from './data.js';
+import { getContactStatus, getSeniorEmail } from './auth.js';
 import { escapeHtml, avColor } from './utils.js';
 import { playClick } from './effects.js';
+
+let currentList = SENIORS;
+let filtersBound = false;
+let districtDropdownBound = false;
+let modalBound = false;
+let contactUpdatesBound = false;
+
+const MAP_PIN_ICON = `
+  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+    <path d="M8 14.2c2.7-3.1 4-5.3 4-7.3A4 4 0 1 0 4 6.9c0 2 1.3 4.2 4 7.3Z" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="8" cy="6.6" r="1.45" fill="currentColor"/>
+  </svg>`;
 
 export function initDirectory() {
   buildDistrictFilter();
   initDistrictDropdown();
+  bindDirectoryFilters();
   bindSeniorModal();
-  renderCards(SENIORS);
-  document.getElementById('search-input')?.addEventListener('input', filterCards);
-  document.getElementById('district-filter')?.addEventListener('change', filterCards);
+  bindContactUpdates();
+  filterCards();
+  updatePrivacyNote();
 }
 
 function buildDistrictFilter() {
@@ -22,7 +36,13 @@ function buildDistrictFilter() {
   });
 }
 
-let districtDropdownBound = false;
+function bindDirectoryFilters() {
+  if (filtersBound) return;
+  filtersBound = true;
+  document.getElementById('search-input')?.addEventListener('input', filterCards);
+  document.getElementById('district-filter')?.addEventListener('change', filterCards);
+  document.getElementById('filter-reset')?.addEventListener('click', resetFilters);
+}
 
 function initDistrictDropdown() {
   const wrapper = document.querySelector('[data-district-select]');
@@ -152,24 +172,74 @@ function focusSelectedDistrictOption() {
 }
 
 function filterCards() {
-  const q = document.getElementById('search-input')?.value.toLowerCase() || '';
+  const q = document.getElementById('search-input')?.value.trim().toLowerCase() || '';
   const d = document.getElementById('district-filter')?.value || '';
-  const filtered = SENIORS.filter((s) => {
-    const txt = (s.name + s.nickname + s.reg + s.district).toLowerCase();
+  currentList = SENIORS.filter((s) => {
+    const txt = `${s.name} ${s.nickname} ${s.reg} ${s.district}`.toLowerCase();
     return (!q || txt.includes(q)) && (!d || s.district === d);
   });
-  renderCards(filtered);
+  renderCards(currentList);
+  updateFilterState(q, d);
+}
+
+function resetFilters() {
+  const input = document.getElementById('search-input');
+  const select = document.getElementById('district-filter');
+  if (input) input.value = '';
+  if (select) {
+    select.value = '';
+    select.dispatchEvent(new Event('change', { bubbles: true }));
+  } else {
+    filterCards();
+  }
+  syncDistrictDropdown();
+}
+
+function updateFilterState(q, d) {
+  const reset = document.getElementById('filter-reset');
+  const count = document.getElementById('senior-count');
+  const active = Boolean(q || d);
+  if (reset) reset.disabled = !active;
+  if (count) {
+    count.textContent = active
+      ? `${currentList.length} of ${SENIORS.length} seniors · filtered`
+      : `${SENIORS.length} seniors · SUST CSE`;
+  }
+}
+
+function bindContactUpdates() {
+  if (contactUpdatesBound) return;
+  contactUpdatesBound = true;
+  window.addEventListener('senior-contacts-updated', () => {
+    renderCards(currentList);
+    updatePrivacyNote();
+  });
+}
+
+function updatePrivacyNote() {
+  const note = document.getElementById('privacy-note');
+  if (!note) return;
+  const status = getContactStatus();
+  note.textContent = status.message;
+  note.hidden = !status.message;
+  note.classList.toggle('unavailable', status.state === 'unavailable');
+}
+
+function getCardHint(s) {
+  const status = getContactStatus();
+  if (status.state === 'available' && getSeniorEmail(s.reg)) return 'View verified email';
+  if (status.state === 'loading') return 'Loading email access';
+  if (status.state === 'unavailable') return 'Email unavailable right now';
+  return 'View public profile';
 }
 
 function renderCards(list) {
   const div = document.getElementById('dir-view');
-  const count = document.getElementById('senior-count');
   if (!div) return;
-  if (count) count.textContent = `${list.length} seniors · SUST CSE`;
   div.innerHTML = '';
 
   if (list.length === 0) {
-    div.innerHTML = '<p class="empty-note">No seniors match your search.</p>';
+    div.innerHTML = '<p class="empty-note">No seniors match this search. Try a different name, reg, or district.</p>';
     return;
   }
 
@@ -186,12 +256,10 @@ function renderCards(list) {
           <div class="sc-nick">${escapeHtml(s.nickname)}</div>
         </div>
       </div>
-      <div class="sc-row"><span class="sc-icon">📍</span>${escapeHtml(s.district)}</div>
+      <div class="sc-row"><span class="sc-icon sc-icon-pin">${MAP_PIN_ICON}</span>${escapeHtml(s.district)}</div>
       <div class="sc-row"><span class="sc-icon">#</span>${escapeHtml(s.reg)}</div>
-      <div class="sc-hint">View full details</div>`;
-    card.addEventListener('click', () => {
-      openSeniorModal(s, col);
-    });
+      <div class="sc-hint">${escapeHtml(getCardHint(s))}</div>`;
+    card.addEventListener('click', () => openSeniorModal(s, col));
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -201,8 +269,6 @@ function renderCards(list) {
     div.appendChild(card);
   });
 }
-
-let modalBound = false;
 
 function bindSeniorModal() {
   if (modalBound) return;
@@ -229,6 +295,19 @@ function setLink(id, value, hrefPrefix) {
   el.href = value ? `${hrefPrefix}${value}` : '#';
 }
 
+function setContactField(fieldId, linkId, value, hrefPrefix) {
+  const field = document.getElementById(fieldId);
+  if (field) field.hidden = !value;
+  setLink(linkId, value, hrefPrefix);
+}
+
+function setContactNote(value) {
+  const note = document.getElementById('sd-contact-note');
+  if (!note) return;
+  note.textContent = value || '';
+  note.hidden = !value;
+}
+
 function openSeniorModal(s, color) {
   playClick();
   const modal = document.getElementById('senior-modal');
@@ -244,11 +323,15 @@ function openSeniorModal(s, color) {
   setText('sd-nick', s.nickname);
   setText('sd-district', s.district);
   setText('sd-reg', s.reg);
-  setLink('sd-phone', s.mobile, 'tel:');
-  setLink('sd-email', s.email, 'mailto:');
+
+  const email = getSeniorEmail(s.reg);
+  const status = getContactStatus();
+  setContactField('sd-email-field', 'sd-email', email, 'mailto:');
+  setContactNote(email ? '' : status.message);
 
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
+  modal.querySelector('.sd-close')?.focus();
 }
 
 function closeSeniorModal() {

@@ -1,6 +1,6 @@
 import { playClick } from './effects.js';
 
-const SCREEN_MAP = { s1: 0, s2: 1, s3: 2, s4: 3 };
+const SCREEN_MAP = { s1: 0, 's-reg': 0, s2: 1, s3: 2, s4: 3 };
 
 export function filmCut(targetId, cb) {
   playClick();
@@ -21,9 +21,10 @@ export function updateBottomNav(sid) {
   });
 }
 
-export function bindLogoScreen() {
+export function bindLogoScreen(getLogoTarget = () => ({ target: 's2', init: initS2FromApp })) {
   document.getElementById('s1')?.addEventListener('click', () => {
-    filmCut('s2', initS2FromApp);
+    const next = getLogoTarget();
+    filmCut(next.target, next.init || null);
   });
 }
 

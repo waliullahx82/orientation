@@ -1,6 +1,12 @@
 import { SENIORS, DISTRICTS_MAP } from './data.js';
+import { getContactStatus, getSeniorEmail } from './auth.js';
 import { avColor, mapDistrictName, escapeHtml } from './utils.js';
 import { playClick } from './effects.js';
+
+let mapContactUpdatesBound = false;
+let mapOutsideClickBound = false;
+let mapCloseBound = false;
+let activePanel = null;
 
 function isTouchMapMode() {
   return window.matchMedia?.('(hover: none), (pointer: coarse)').matches || false;
@@ -8,7 +14,27 @@ function isTouchMapMode() {
 
 export function initMap() {
   buildMap();
+  bindMapPanelEvents();
+  bindMapContactUpdates();
+}
+
+function bindMapPanelEvents() {
+  if (mapCloseBound) return;
+  mapCloseBound = true;
   document.querySelector('.mp-close')?.addEventListener('click', closeMapPanel);
+
+  if (!mapOutsideClickBound) {
+    mapOutsideClickBound = true;
+    document.addEventListener('click', closeMapPanelOnOutsideClick);
+  }
+}
+
+function bindMapContactUpdates() {
+  if (mapContactUpdatesBound) return;
+  mapContactUpdatesBound = true;
+  window.addEventListener('senior-contacts-updated', () => {
+    if (activePanel) openMapPanel(activePanel.dist, activePanel.list, true);
+  });
 }
 
 function buildMap() {
@@ -57,7 +83,10 @@ function buildMap() {
       hideTooltip();
     });
 
-    path.addEventListener('click', () => openMapPanel(d.name, byDist[d.name] || []));
+    path.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openMapPanel(d.name, byDist[d.name] || []);
+    });
     distGroup.appendChild(path);
 
     if (count > 0) {
@@ -69,11 +98,12 @@ function buildMap() {
         <circle class="marker-pulse" cx="${cx}" cy="${cy}" r="5" fill="none" stroke="${col}" stroke-width="1" style="animation-delay:${(di * 0.3) % 3}s"/>
         <circle cx="${cx}" cy="${cy}" r="4" fill="${col}" opacity="0.9"/>
         <circle cx="${cx}" cy="${cy}" r="10" fill="transparent"/>`;
-      g.addEventListener('mouseenter', (e) => {
-        showMapTooltip(e, d.name, count);
-      });
+      g.addEventListener('mouseenter', (e) => showMapTooltip(e, d.name, count));
       g.addEventListener('mouseleave', hideTooltip);
-      g.addEventListener('click', () => openMapPanel(d.name, byDist[d.name]));
+      g.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openMapPanel(d.name, byDist[d.name]);
+      });
       markerGroup.appendChild(g);
     }
   });
@@ -99,9 +129,10 @@ function hideTooltip() {
   document.getElementById('map-tooltip')?.classList.remove('show');
 }
 
-function openMapPanel(dist, list) {
-  playClick();
+function openMapPanel(dist, list, silent = false) {
+  if (!silent) playClick();
   hideTooltip();
+  activePanel = { dist, list };
   const label = document.getElementById('mp-dist-label');
   const cards = document.getElementById('mp-cards');
   if (!label || !cards) return;
@@ -119,9 +150,12 @@ function openMapPanel(dist, list) {
       div.innerHTML = `
         <div class="mp-card-top">
           <div class="mp-av" style="background:${col}">${escapeHtml(s.initials)}</div>
-          <div><div class="mp-name">${escapeHtml(s.name)}</div><div class="mp-reg">${escapeHtml(s.reg)}</div></div>
+          <div>
+            <div class="mp-name">${escapeHtml(s.name)}</div>
+            <div class="mp-reg">${escapeHtml(s.reg)}</div>
+          </div>
         </div>
-        <div class="mp-info">📱 ${escapeHtml(s.mobile)}<br>✉ ${escapeHtml(s.email)}</div>`;
+        <div class="mp-info">${renderMapInfo(s)}</div>`;
       cards.appendChild(div);
     });
   }
@@ -129,8 +163,28 @@ function openMapPanel(dist, list) {
   document.getElementById('map-panel')?.classList.add('open');
 }
 
+function renderMapInfo(s) {
+  const email = getSeniorEmail(s.reg);
+  const status = getContactStatus();
+  const rows = [`District: ${escapeHtml(s.district)}`];
+  if (email) {
+    rows.push(`Email: <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a>`);
+  } else if (status.state === 'unavailable') {
+    rows.push(escapeHtml(status.message));
+  }
+  return rows.join('<br>');
+}
+
 function closeMapPanel() {
+  activePanel = null;
   document.getElementById('map-panel')?.classList.remove('open');
+}
+
+function closeMapPanelOnOutsideClick(e) {
+  const panel = document.getElementById('map-panel');
+  if (!activePanel || !panel?.classList.contains('open')) return;
+  if (panel.contains(e.target)) return;
+  closeMapPanel();
 }
 
 export function switchView(v, silent = false) {
@@ -141,9 +195,9 @@ export function switchView(v, silent = false) {
   const dirView = document.getElementById('dir-view');
   const mapView = document.getElementById('map-view');
   const searchBar = document.getElementById('search-bar');
+  const privacyNote = document.getElementById('privacy-note');
   if (dirView) dirView.style.display = v === 'dir' ? '' : 'none';
   if (mapView) mapView.style.display = v === 'map' ? 'block' : 'none';
   if (searchBar) searchBar.style.display = v === 'dir' ? '' : 'none';
-
-
+  if (privacyNote) privacyNote.style.display = v === 'dir' ? '' : 'none';
 }

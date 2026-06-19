@@ -1,3 +1,7 @@
+function prefersReducedMotion() {
+  return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches || false;
+}
+
 export function playClick() {
   try {
     const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -15,6 +19,7 @@ export function playClick() {
 }
 
 export function initCodeRain() {
+  if (prefersReducedMotion()) return;
   const canvas = document.getElementById('code-rain');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -46,6 +51,7 @@ export function initCodeRain() {
 }
 
 export function spawnConfetti() {
+  if (prefersReducedMotion()) return;
   const wrap = document.getElementById('confetti-wrap');
   if (!wrap) return;
   wrap.innerHTML = '';

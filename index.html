@@ -26,12 +26,32 @@
     <div class="s1-tap">Tap anywhere to begin</div>
   </div>
 
+  <!-- SCREEN: REGISTRATION VERIFICATION -->
+  <div class="screen" id="s-reg">
+    <form class="reg-card" id="reg-form" autocomplete="off">
+      <div class="reg-kicker">// Batch 25 access</div>
+      <h1 class="reg-title">Verify your registration</h1>
+      <p class="reg-copy">
+        Enter your SUST registration number to unlock the orientation portal.
+      </p>
+      <label class="reg-label" for="reg-input">Registration number</label>
+      <input class="reg-input" id="reg-input" name="reg" inputmode="numeric" pattern="[0-9]*" autocomplete="off"
+        placeholder="Your registration number">
+      <button type="submit" class="reg-submit" id="reg-submit">Continue</button>
+      <div class="reg-message" id="reg-message" role="status" aria-live="polite"></div>
+      <p class="reg-privacy">
+        We verify only your registration number. Senior emails are loaded after verification and are not shipped in
+        the frontend.
+      </p>
+    </form>
+  </div>
+
   <!-- SCREEN 2: CONGRATULATIONS -->
   <div class="screen" id="s2">
     <div class="confetti-wrap" id="confetti-wrap"></div>
     <div class="congrats-label">// Class of 2025</div>
     <div class="congrats-name" id="junior-name-display"></div>
-    <h1 class="congrats-h1">Congratulations,<br>Batch 25!</h1>
+    <h1 class="congrats-h1">Congratulations</h1>
     <div class="congrats-sub">You are now part of SUST CSE family</div>
     <button type="button" class="congrats-btn" id="btn-to-letters">Read letters from your seniors →</button>
   </div>
@@ -82,6 +102,10 @@
           <div class="district-select-menu" id="district-filter-menu" role="listbox"
             aria-labelledby="district-filter-trigger"></div>
         </div>
+        <button type="button" class="filter-reset" id="filter-reset">Reset</button>
+      </div>
+      <div class="privacy-note" id="privacy-note" style="display:none">
+        Senior emails appear only after junior registration verification.
       </div>
       <div id="dir-view"></div>
       <div id="map-view">
@@ -117,14 +141,11 @@
             <span class="sd-label">Reg</span>
             <span class="sd-value" id="sd-reg"></span>
           </div>
-          <div class="sd-field sd-wide">
-            <span class="sd-label">Phone</span>
-            <a class="sd-value sd-link" id="sd-phone"></a>
-          </div>
-          <div class="sd-field sd-wide">
+          <div class="sd-field sd-wide sd-contact-field" id="sd-email-field" hidden>
             <span class="sd-label">Email</span>
             <a class="sd-value sd-link" id="sd-email"></a>
           </div>
+          <div class="sd-contact-note" id="sd-contact-note"></div>
         </div>
       </section>
     </div>
