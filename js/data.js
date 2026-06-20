@@ -969,13 +969,6 @@ export const QUOTES = [
     "color": "#27a85a"
   },
   {
-    "body": "Honestly, when I first joined the department I thought university would just be classes, exams, grades, that whole grind. And yeah, those things mattered, but if I'm being real, they're not what I actually remember now.\nWhat I actually remember is the late-night chats right before exams when nobody could sleep anyway, the never-ending tea breaks, study sessions that somehow turned into us just talking about everything except the syllabus, and honestly, the people who made the hard days bearable.\nSo my advice? Don't stress so much about the future that you forget to live in the present. Work hard, obviously, but also actually enjoy where you are right now. Go to the events even if you feel awkward, talk to your seniors, hang out with people outside your usual friend group, and please don't be scared of messing up. Everyone feels lost sometimes, even the people who seem like they've got it all figured out. They don't, trust me.\nAnd there's no one \"correct\" way to do these four years. Some people figure out their path early on, others take their time, and honestly both are fine. Stop comparing your timeline to everyone else's.\nA few years down the line, you won't remember half the grades you got. But you'll remember the people, the random moments, the inside jokes, the chaos. That's what actually stays with you.\nAnyway, good luck. Go make your own stories and actually enjoy the ride while you're in it.",
-    "name": "Md khalid hasan",
-    "reg": "2024331086",
-    "dist": "Jhenaidah",
-    "color": "#F4A024"
-  },
-  {
     "body": "Seriously, enjoy your varsity life. You get only 1 chance, use it wisely.",
     "name": "Md Wasif Shafiq",
     "reg": "2024331090",
