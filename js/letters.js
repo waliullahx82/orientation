@@ -24,7 +24,7 @@ function buildCarousel() {
   if (!track || !dots) return;
 
   track.innerHTML = '';
-  dots.innerHTML = '';
+  dots.innerHTML = '<div class="lnav-progress-fill" id="letters-progress-fill"></div>';
 
   QUOTES.forEach((_, i) => {
     const slide = document.createElement('article');
@@ -43,15 +43,6 @@ function buildCarousel() {
       </div>`;
     track.appendChild(slide);
 
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.className = 'lnav-dot' + (i === 0 ? ' on' : '');
-    dot.setAttribute('aria-label', `Letter ${i + 1}`);
-    dot.addEventListener('click', () => {
-      playClick();
-      goTo(i);
-    });
-    dots.appendChild(dot);
   });
 
   track.addEventListener('touchstart', (e) => {
@@ -104,7 +95,8 @@ function renderQuote(i, animate) {
     }
   });
 
-  document.querySelectorAll('.lnav-dot').forEach((d, j) => d.classList.toggle('on', j === i));
+  const progressFill = document.getElementById('letters-progress-fill');
+  if (progressFill) progressFill.style.width = `${((i + 1) / QUOTES.length) * 100}%`;
   document.getElementById('letter-prev').disabled = i === 0;
   document.getElementById('letter-next').disabled = i === QUOTES.length - 1;
 }

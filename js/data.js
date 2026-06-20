@@ -703,74 +703,361 @@ export const SENIORS = [
 
 export const QUOTES = [
   {
-    "body": "Dear Batch 25, the day you walk into SUST CSE is not just the beginning of a degree — it is the beginning of who you will become. You will struggle, you will question yourself at 3am before a deadline, and you will grow in ways you cannot yet imagine. Hold on to your curiosity. It is the only thing that never lets you down.",
-    "name": "Orin Ahammed",
-    "reg": "2023331005",
-    "dist": "Manikganj",
+    "body": "Always smile",
+    "name": "Moumita khan Tasrin",
+    "reg": "2024331002",
+    "dist": "Madaripur",
     "color": "#F4A024"
   },
   {
-    "body": "Welcome to the family, juniors. Four years will pass faster than any loop you have ever written. Make every semester count — not for the CGPA alone, but for the friendships, the late nights, the debates about which language is best. Those arguments, I promise, will matter more than the exam you forgot to study for.",
-    "name": "Wasif Jamil Siddique",
-    "reg": "2024331001",
-    "dist": "Habiganj",
+    "body": "Never ever compromise with your honesty, decency, and perseverance, juniors! These values define who you are and what you will become. Wishing you all the best for the journey ahead at SUST CSE. The legacy has been built by generations before you—now it's your turn to carry it forward with pride.",
+    "name": "Asir Abrar Sreezon",
+    "reg": "2024331003",
+    "dist": "Dinajpur",
     "color": "#27a85a"
   },
   {
-    "body": "Batch 25, you have earned this seat. Thousands tried, and you made it here. Take a moment to feel that. Now get to work — but work with joy, not fear. The best code I ever wrote was for a project I genuinely cared about. Find what you care about inside these walls, and build it.",
-    "name": "Mahathir Mohammad Tonmoy",
-    "reg": "2024331008",
-    "dist": "Barisal",
+    "body": "First of all, welcome to the CSE Family. You are about to begin a new journey—one that is full of challenges, opportunities, and countless learning experiences.",
+    "name": "Rajesh Sutradhar",
+    "reg": "2024331007",
+    "dist": "Kishoreganj",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Good luck",
+    "name": "MD. Moktadir Nafiu",
+    "reg": "2024331009",
+    "dist": "Narayangonj",
+    "color": "#27a85a"
+  },
+  {
+    "body": "❌ভার্সিটি লাইফে কোনো প্যারা নাই, শুধুই chill. ✔️ ভার্সিটি লাইফে অনেক প্যারা, তবুও আমরা chill করি",
+    "name": "Koushik Sadhak Jeet",
+    "reg": "2024331010",
+    "dist": "Pirojpur",
     "color": "#F4A024"
   },
   {
-    "body": "To every junior reading this — do not wait to be ready. Start the project, join the club, send the email. Readiness is a myth that keeps people comfortable and small. SUST CSE gave me courage by throwing me into the deep end. Let it do the same for you.",
-    "name": "Shadman Sakib Riham",
-    "reg": "2024331024",
+    "body": "Rag er culture notun uddome suru korte hbe",
+    "name": "Muaj Bin Omar",
+    "reg": "2024331011",
+    "dist": "Jhenaidah",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Cp = child po",
+    "name": "Hossain Mohammad Nahdi",
+    "reg": "2024331013",
     "dist": "Dhaka",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Do what you truly want. Never let anyone else define who you are and what you do.",
+    "name": "Hossain Mohammad Nahdi",
+    "reg": "2024331013",
+    "dist": "Dhaka",
+    "color": "#F4A024"
+  },
+  {
+    "body": "These are the most precious years of your life. Live fully, enjoy deeply, and make memories you’ll carry forever. Meet new people, build connections, and you might just find a second family here. Stay grounded, stay genuine, and stay kind.\nOne day, you’ll look back at this time and wish you could relive it,so don’t just go through it, live it.",
+    "name": "Md Mahir Afnan",
+    "reg": "2024331014",
+    "dist": "Dinajpur",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Implement korar duniay shagotom.",
+    "name": "Nasimul Bari Nafim",
+    "reg": "2024331020",
+    "dist": "Noakhali",
     "color": "#27a85a"
   },
   {
-    "body": "The seniors who helped me when I was lost are the reason I am writing this today. We pay it forward in this department. If you are ever confused — about academics, about career, about life — knock on a senior's door. We remember what it felt like to be where you are now.",
+    "body": "Congrats little guys, you guys got here through immense hardship",
+    "name": "nazmuj shakib mahim",
+    "reg": "2024331021",
+    "dist": "Rajshahi",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Happy intake juniors",
+    "name": "Siam Ul Haque",
+    "reg": "2024331025",
+    "dist": "Gaibandha",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Run before it's too late",
+    "name": "MD. MOSTAKIMUL AL-AMIN",
+    "reg": "2024331027",
+    "dist": "Sirajganj",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Hey Junior, welcome to the SUST CSE family! ☕💻 First, congrats on making it here. Second, our deepest condolences to your sleep cycle! Don't panic when your code throws 50 errors on the night before a deadline, and don't lose hope when a bug takes three days to solve. The panic is temporary, but the \"Aha!\" moment when it finally runs? Absolute peak. If you ever need any help with academics, or if you face any kind of problem, don't hesitate to reach out. I've got your back! I wish you a wonderful journey here and hope you can pursue your dreams. Hope to see you in the 3 AM grind at the CP lab! Enjoy, and don't fall into the AI trap! (Although this message is partially AI-generated! ;))",
+    "name": "Shaikh Ibnul Islam",
+    "reg": "2024331028",
+    "dist": "Mymensingh",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Pera Nai Chill 🥲",
+    "name": "Md.Mohibul Islam Shuvo",
+    "reg": "2024331029",
+    "dist": "Rangpur",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Pera nai chill(🥲+😺emoji)",
     "name": "Sadia Laiba Nuha",
     "reg": "2024331031",
     "dist": "Kishoreganj",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Best of luck for your future",
+    "name": "Mafinur Karim",
+    "reg": "2024331033",
+    "dist": "Bogura",
     "color": "#F4A024"
   },
   {
-    "body": "Dear junior, university life is 20% what you study and 80% who you become. The algorithms you learn will evolve, the languages will change, but your ability to think, to communicate, to persist — that is what will carry you for the next 40 years. Build the person, not just the programmer.",
+    "body": "One Piece is Real!",
     "name": "Sheikh Wadil Ayman",
     "reg": "2024331040",
     "dist": "Dhaka",
-    "color": "#27a85a"
-  },
-  {
-    "body": "I came to SUST from a small town, knowing almost no one. By the time I left, this place had given me my closest friends, my confidence, and my career. Batch 25, this department has a way of finding what is best in you and pulling it out. Let it. Trust the process, even when it is hard.",
-    "name": "Rumisha Siddiqua",
-    "reg": "2024331070",
-    "dist": "Sylhet",
     "color": "#F4A024"
   },
   {
-    "body": "One piece of advice I wish someone had given me on day one: go to the lab even when there is no assignment due. Sit with the code. Experiment. Break things on purpose. The students who thrived in our batch were not the ones who studied hardest — they were the ones who were most genuinely curious.",
-    "name": "Muaz Islam",
-    "reg": "2024331091",
+    "body": "Be free with immediate seniors...",
+    "name": "Nafis Ahsan",
+    "reg": "2024331041",
+    "dist": "Jamalpur",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Success is not final, failure is not fatal, It is the courage to continue that counts.",
+    "name": "WASIF FOYSAL RAYID",
+    "reg": "2024331046",
+    "dist": "Nilphamari",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Let's hope for the best. Code,enjoy and make memories not just lines.",
+    "name": "Md. Fossiuzzaman Fuad",
+    "reg": "2024331048",
+    "dist": "Pabna",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Focus on consistency, avoid incompetent  people",
+    "name": "Kowser Ahmed",
+    "reg": "2024331052",
+    "dist": "Sirajganj",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Dhaka to Sylhet road is the worst thing that has ever happened to humanity. So, travel by air if you can.",
+    "name": "Md. Nayeemujjaman Khondoker Neyshan",
+    "reg": "2024331053",
+    "dist": "Kurigram",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Zaida gaandmasti maat karna",
+    "name": "Shadman Shakib Rahik",
+    "reg": "2024331055",
     "dist": "Dhaka",
     "color": "#27a85a"
   },
   {
-    "body": "Batch 25, you join at a time when technology is reshaping everything. What you build in the next four years may actually change lives. That is not an exaggeration — I have seen it happen in this department. Take that responsibility seriously, and carry it with pride.",
+    "body": "Eat, sleep and code",
+    "name": "Md. Mosfiqur Rahman",
+    "reg": "2024331057",
+    "dist": "Thakurgaon",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Don't overthink, just go with the flow and code",
+    "name": "Md. Mosfiqur Rahman",
+    "reg": "2024331057",
+    "dist": "Thakurgaon",
+    "color": "#27a85a"
+  },
+  {
+    "body": "while (at_SUST) {\nlearn();\nexplore();\nmake_friends();\ncreate_memories();\n}\n\nOutput:\n\"Welcome to SUST CSE.\"\n\nWarning:\nThis program may cause addiction to coding, caffeine, and late-night discussions.\n\n— Your Immediate Seniors",
+    "name": "Pranto Roy",
+    "reg": "2024331059",
+    "dist": "Mymensingh",
+    "color": "#27a85a"
+  },
+  {
+    "body": "University gives you freedom, but freedom without discipline becomes regret. Manage your time before time manages you. Don't be discouraged by others' achievements; be inspired by them. Your competition is not the person sitting beside you—it's the person you were yesterday. As you grow, stay humble, because talent may earn success, but humility earns respect. Spend these four years becoming the best version of yourself.  Wishing you a journey filled with growth, meaningful friendships, and memories you'll carry long after graduation. Welcome aboard!",
+    "name": "Mushfiqur Rahman Rafi",
+    "reg": "2024331061",
+    "dist": "Brahmanbaria",
+    "color": "#F4A024"
+  },
+  {
+    "body": "University gives you freedom, but freedom without discipline becomes regret. Manage your time before time manages you. Don't be discouraged by others' achievements; be inspired by them. Your competition is not the person sitting beside you—it's the person you were yesterday. Keep improving, stay humble, and spend these four years becoming the best version of yourself.\n\nWishing you success, growth, and an unforgettable university journey ahead.",
+    "name": "Mushfiqur Rahman Rafi",
+    "reg": "2024331061",
+    "dist": "Brahmanbaria",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Make us proud. Make SUST proud for having you. Do something so profound that when you look back from future you can say, \"It was all worth it\".",
+    "name": "MD Gaziur Rahman Noor",
+    "reg": "2024331063",
+    "dist": "Noakhali",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Welcome to hell! Anyway, congrats to all.",
+    "name": "Ashfiq Shahriar Mahi",
+    "reg": "2024331064",
+    "dist": "Bogura",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Life is beatiful, life is easy.",
+    "name": "MD. Nayeem Islam Shanto",
+    "reg": "2024331067",
+    "dist": "Kushtia",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Wish you guys a happy and smooth varsity life. Focus on goals not on prem piriti.😁. Everything outside goals are secondary.✌️.",
+    "name": "Misbahur Rahman Mahi",
+    "reg": "2024331069",
+    "dist": "Natore",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Let’s build a wholesome environment",
+    "name": "AHNAF FARHAN OHI",
+    "reg": "2024331076",
+    "dist": "Bogura",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Welcome, kiddos! Best of luck as you start this amazing journey—remember to stay connected with your seniors, because we've always got your back. You've got this!",
+    "name": "RAFSAN ALAM",
+    "reg": "2024331077",
+    "dist": "Dhaka",
+    "color": "#27a85a"
+  },
+  {
+    "body": "May your uni life be filled with fun experience, adventures, and good vibes!",
     "name": "Mamnuna Hasan",
     "reg": "2024331080",
     "dist": "Sunamganj",
     "color": "#F4A024"
   },
   {
-    "body": "To every junior who feels like they do not belong here — I felt that too on orientation day. Imposter syndrome is real in CSE. But here is the truth: you were selected because you belong. The doubt fades. The skills grow. And one day you will be writing a letter just like this one to the batch that comes after you.",
+    "body": "All the best, kiddo. Stay focused on your goals and keep coding your future with consistency and hard work. Make your dear ones proud again. Utilize the opportunity you've got at SUST, because not everyone gets this chance. Keep compiling your dreams into reality. May Allah bless you.",
+    "name": "Md. Mahbobul Hasan Sagor",
+    "reg": "2024331081",
+    "dist": "Kishoreganj",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Learn slowly, code daily, fail often, and grow steadily.",
+    "name": "Waliullah Kawsar",
+    "reg": "2024331082",
+    "dist": "Sirajganj",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Honestly, when I first joined the department I thought university would just be classes, exams, grades, that whole grind. And yeah, those things mattered, but if I'm being real, they're not what I actually remember now.\nWhat I actually remember is the late-night chats right before exams when nobody could sleep anyway, the never-ending tea breaks, study sessions that somehow turned into us just talking about everything except the syllabus, and honestly, the people who made the hard days bearable.\nSo my advice? Don't stress so much about the future that you forget to live in the present. Work hard, obviously, but also actually enjoy where you are right now. Go to the events even if you feel awkward, talk to your seniors, hang out with people outside your usual friend group, and please don't be scared of messing up. Everyone feels lost sometimes, even the people who seem like they've got it all figured out. They don't, trust me.\nAnd there's no one \"correct\" way to do these four years. Some people figure out their path early on, others take their time, and honestly both are fine. Stop comparing your timeline to everyone else's.\nA few years down the line, you won't remember half the grades you got. But you'll remember the people, the random moments, the inside jokes, the chaos. That's what actually stays with you.\nAnyway, good luck. Go make your own stories and actually enjoy the ride while you're in it.",
+    "name": "Md khalid hasan",
+    "reg": "2024331086",
+    "dist": "Jhenaidah",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Seriously, enjoy your varsity life. You get only 1 chance, use it wisely.",
+    "name": "Md Wasif Shafiq",
+    "reg": "2024331090",
+    "dist": "Kushtia",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Focus on Enjoying your University Life. You can always work hard, but you can't get back these years of fun",
+    "name": "Muaz Islam",
+    "reg": "2024331091",
+    "dist": "Dhaka",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Be persistent. Persistence will take you farther than almost anything else. Stay focused, stay curious, and make the most of your campus life.",
+    "name": "Md.Mahfuzur Rahman Shakib",
+    "reg": "2024331096",
+    "dist": "Moulvibazar",
+    "color": "#F4A024"
+  },
+  {
+    "body": "You will be remembered my warrior",
     "name": "Ashfika Rahman",
     "reg": "2024331100",
     "dist": "Cumilla",
     "color": "#27a85a"
+  },
+  {
+    "body": "Make sure to utilise your potential",
+    "name": "Harprashad Roy",
+    "reg": "2024331103",
+    "dist": "Dinajpur",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Be gentle and respectful to your elders and be friendly with your batchmates. Best wishes for your new beginning!",
+    "name": "Nowrin Rahman",
+    "reg": "2024331105",
+    "dist": "Pabna",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Best of luck for your upcoming days.",
+    "name": "Tahsin Rashid",
+    "reg": "2024331107",
+    "dist": "Dhaka",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Keep coding, keep learning, and never fear bugs—they're part of the journey. May your code compile on the first try and your dreams turn into reality. Good luck! Best wishes!!",
+    "name": "Salsabil Mehrin",
+    "reg": "2024331109",
+    "dist": "Chittagong",
+    "color": "#27a85a"
+  },
+  {
+    "body": "life is beautiful sometimes, it conceals what needs to be.",
+    "name": "Habib Ullah Tanim",
+    "reg": "2024331110",
+    "dist": "Mymensingh",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Seek comfort in patience and prayer. Allah is truly with those who are patient. (2:153)",
+    "name": "Muhtaseem Al Mahmud Nawroj",
+    "reg": "2024331113",
+    "dist": "Chittagong",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Be mindful of Allah and be with the truthful.",
+    "name": "Muhtaseem Al Mahmud Nawroj",
+    "reg": "2024331113",
+    "dist": "Chittagong",
+    "color": "#F4A024"
+  },
+  {
+    "body": "You're more valuable than you understand.",
+    "name": "Shuddho Sharaf",
+    "reg": "2024331114",
+    "dist": "Kurigram",
+    "color": "#F4A024"
   }
 ];
 
