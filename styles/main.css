@@ -462,6 +462,7 @@ body {
 
 .letter-slide {
   min-width: 100%;
+  display: flex;
 }
 
 .letter-card {
@@ -470,9 +471,11 @@ body {
   border-radius: 12px;
   padding: 2rem 2.2rem;
   position: relative;
-  min-height: 360px;
+  width: 100%;
+  height: clamp(360px, 58vh, 430px);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .letter-card::before {
@@ -501,6 +504,7 @@ body {
   font-style: italic;
   margin-bottom: 1.6rem;
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
   padding-right: 4px;
 }
@@ -1471,7 +1475,7 @@ body {
 
   .letter-card {
     padding: 1.4rem 1.2rem;
-    min-height: 390px;
+    height: clamp(390px, 58vh, 450px);
   }
 
   .lnav-btn {

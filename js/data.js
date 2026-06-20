@@ -1,26 +1,5 @@
 export const SENIORS = [
   {
-    "name": "Orin Ahammed",
-    "nickname": "Orin",
-    "reg": "2023331005",
-    "district": "Manikganj",
-    "initials": "OA"
-  },
-  {
-    "name": "Md.Riajul haque",
-    "nickname": "Riaj",
-    "reg": "2023331006",
-    "district": "Chittagong",
-    "initials": "MH"
-  },
-  {
-    "name": "Man Woi Mro",
-    "nickname": "Man Woi Mro",
-    "reg": "2023331103",
-    "district": "Bandarban",
-    "initials": "MW"
-  },
-  {
     "name": "Wasif Jamil Siddique",
     "nickname": "Wasif",
     "reg": "2024331001",
@@ -693,11 +672,25 @@ export const SENIORS = [
     "initials": "IA"
   },
   {
-    "name": "Rafihath Saleh Chowdhury",
-    "nickname": "Rafihath",
-    "reg": "2024331118",
-    "district": "Sylhet",
-    "initials": "RS"
+    "name": "Orin Ahammed",
+    "nickname": "Orin",
+    "reg": "2023331005",
+    "district": "Manikganj",
+    "initials": "OA"
+  },
+  {
+    "name": "Md.Riajul haque",
+    "nickname": "Riaj",
+    "reg": "2023331006",
+    "district": "Chittagong",
+    "initials": "MH"
+  },
+  {
+    "name": "Man Woi Mro",
+    "nickname": "Man Woi Mro",
+    "reg": "2023331103",
+    "district": "Bandarban",
+    "initials": "MW"
   }
 ];
 
@@ -717,10 +710,16 @@ export const QUOTES = [
     "color": "#27a85a"
   },
   {
-    "body": "First of all, welcome to the CSE Family. You are about to begin a new journey—one that is full of challenges, opportunities, and countless learning experiences.",
-    "name": "Rajesh Sutradhar",
+    "body": "University life is not just about studying, so connect with people, explore different fields, and keep learning. Best of luck for your journey ahead!",
     "reg": "2024331007",
     "dist": "Kishoreganj",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Code -> Create -> Connect\nExplore & Execute",
+    "name": "Mahathir Mohammad Tonmoy",
+    "reg": "2024331008",
+    "dist": "Barisal",
     "color": "#27a85a"
   },
   {
@@ -735,20 +734,6 @@ export const QUOTES = [
     "name": "Koushik Sadhak Jeet",
     "reg": "2024331010",
     "dist": "Pirojpur",
-    "color": "#F4A024"
-  },
-  {
-    "body": "Rag er culture notun uddome suru korte hbe",
-    "name": "Muaj Bin Omar",
-    "reg": "2024331011",
-    "dist": "Jhenaidah",
-    "color": "#27a85a"
-  },
-  {
-    "body": "Cp = child po",
-    "name": "Hossain Mohammad Nahdi",
-    "reg": "2024331013",
-    "dist": "Dhaka",
     "color": "#F4A024"
   },
   {
@@ -871,13 +856,6 @@ export const QUOTES = [
     "color": "#27a85a"
   },
   {
-    "body": "Eat, sleep and code",
-    "name": "Md. Mosfiqur Rahman",
-    "reg": "2024331057",
-    "dist": "Thakurgaon",
-    "color": "#27a85a"
-  },
-  {
     "body": "Don't overthink, just go with the flow and code",
     "name": "Md. Mosfiqur Rahman",
     "reg": "2024331057",
@@ -890,13 +868,6 @@ export const QUOTES = [
     "reg": "2024331059",
     "dist": "Mymensingh",
     "color": "#27a85a"
-  },
-  {
-    "body": "University gives you freedom, but freedom without discipline becomes regret. Manage your time before time manages you. Don't be discouraged by others' achievements; be inspired by them. Your competition is not the person sitting beside you—it's the person you were yesterday. As you grow, stay humble, because talent may earn success, but humility earns respect. Spend these four years becoming the best version of yourself.  Wishing you a journey filled with growth, meaningful friendships, and memories you'll carry long after graduation. Welcome aboard!",
-    "name": "Mushfiqur Rahman Rafi",
-    "reg": "2024331061",
-    "dist": "Brahmanbaria",
-    "color": "#F4A024"
   },
   {
     "body": "University gives you freedom, but freedom without discipline becomes regret. Manage your time before time manages you. Don't be discouraged by others' achievements; be inspired by them. Your competition is not the person sitting beside you—it's the person you were yesterday. Keep improving, stay humble, and spend these four years becoming the best version of yourself.\n\nWishing you success, growth, and an unforgettable university journey ahead.",
@@ -920,7 +891,7 @@ export const QUOTES = [
     "color": "#F4A024"
   },
   {
-    "body": "Life is beatiful, life is easy.",
+    "body": "Life is beautiful, life is easy.",
     "name": "MD. Nayeem Islam Shanto",
     "reg": "2024331067",
     "dist": "Kushtia",
@@ -969,7 +940,7 @@ export const QUOTES = [
     "color": "#27a85a"
   },
   {
-    "body": "Seriously, enjoy your varsity life. You get only 1 chance, use it wisely.",
+    "body": "Life is too short to satisfy everyone. So satisfy yourself first 😉",
     "name": "Md Wasif Shafiq",
     "reg": "2024331090",
     "dist": "Kushtia",
