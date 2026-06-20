@@ -711,6 +711,7 @@ export const QUOTES = [
   },
   {
     "body": "University life is not just about studying, so connect with people, explore different fields, and keep learning. Best of luck for your journey ahead!",
+    "name": "Rajesh Sutradhar",
     "reg": "2024331007",
     "dist": "Kishoreganj",
     "color": "#27a85a"
@@ -845,6 +846,13 @@ export const QUOTES = [
     "body": "Dhaka to Sylhet road is the worst thing that has ever happened to humanity. So, travel by air if you can.",
     "name": "Md. Nayeemujjaman Khondoker Neyshan",
     "reg": "2024331053",
+    "dist": "Kurigram",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Stop letting compiler errors control your life. We're grinding vs code today—don't fumble the play. 💻🔥",
+    "name": "Khalid Khan",
+    "reg": "2024331054",
     "dist": "Kurigram",
     "color": "#F4A024"
   },
@@ -1010,16 +1018,16 @@ export const QUOTES = [
     "color": "#27a85a"
   },
   {
-    "body": "Be mindful of Allah and be with the truthful.",
-    "name": "Muhtaseem Al Mahmud Nawroj",
-    "reg": "2024331113",
-    "dist": "Chittagong",
-    "color": "#F4A024"
-  },
-  {
     "body": "You're more valuable than you understand.",
     "name": "Shuddho Sharaf",
     "reg": "2024331114",
+    "dist": "Kurigram",
+    "color": "#F4A024"
+  },
+  {
+    "body": "Congratulations and good luck. Stay humble and build friendships gradually. Never isolate yourself, procrastinate or give up. Always stay focused, be cautious and help others without harming yourself.Remember: “Destiny getting in your way is often just a misunderstanding—you reap what you sow.”\n—Sayonara",
+    "name": "Sazzad Bin Noor",
+    "reg": "2024331115",
     "dist": "Kurigram",
     "color": "#F4A024"
   }
