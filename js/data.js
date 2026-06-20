@@ -297,7 +297,7 @@ export const SENIORS = [
     "name": "Md. Fossiuzzaman Fuad",
     "nickname": "Fuad",
     "reg": "2024331048",
-    "district": "Pabna",
+    "district": "Dhaka",
     "initials": "MF"
   },
   {
