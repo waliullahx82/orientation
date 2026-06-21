@@ -899,7 +899,7 @@ export const QUOTES = [
     "color": "#F4A024"
   },
   {
-    "body": "Life is beautiful, life is easy.",
+    "body": "Hey juniors,\n\nIf you're excited about robotics, autonomous vehicles, ROS, embedded systems, sensors, control, or simply enjoy seeing your code come alive in the real world, feel free to reach out to me.\n\nWe're currently working on two exciting projects: • F1TENTH Autonomous Racing – building and testing self-driving race cars. • ROS 2 Mobile Robot – perception, navigation, mapping, and autonomous operation.\n\nWhether you're experienced or just curious and willing to learn, you're welcome to connect. If building things, experimenting, and learning by doing sounds fun to you, let's talk!",
     "name": "MD. Nayeem Islam Shanto",
     "reg": "2024331067",
     "dist": "Kushtia",
@@ -911,6 +911,13 @@ export const QUOTES = [
     "reg": "2024331069",
     "dist": "Natore",
     "color": "#27a85a"
+  },
+  {
+    "body": "Explore, explore, and explore. CSE is a vast field with countless domains to explore, including software development, cybersecurity, competitive programming, low-level systems, system design, and many others. Explore them, see what attracts you, and start early. Good luck and stay connected.",
+    "name": "Shahnoor Islam Prantik",
+    "reg": "2024331071",
+    "dist": "Jamalpur",
+    "color": "#F4A024"
   },
   {
     "body": "The first year is the best time to enjoy university life, so travel around, explore new places, and try to get to know as many people as possible✨",
@@ -959,6 +966,13 @@ export const QUOTES = [
     "name": "Waliullah Kawsar",
     "reg": "2024331082",
     "dist": "Sirajganj",
+    "color": "#27a85a"
+  },
+  {
+    "body": "Humans are inherently hypocrites . We advise other on things we don't do . We romanticise are sufferings , frustration, disappointments . We can't change that or rather we shouldn't. That much hypocracy keeps you stable but overdoing that will turn you into something vile.",
+    "name": "Hasan Ruhani Labib",
+    "reg": "2024331087",
+    "dist": "Sherpur",
     "color": "#27a85a"
   },
   {
