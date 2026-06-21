@@ -14,6 +14,7 @@ const JUNIORS = {
   "202561201065": "Nilkontha Das",
   "202561201007": "Md. Ahnaf Sadiq",
   "202561201002": "MD. ARIF SHAHORIYAR MAHI",
+  "202561201126": "Akib Azmain Turja",
   "202561201005": "A.B.M. Saeid",
   "202561201066": "Tahmid Chowdhury",
   "202561201001": "Sifat Tahsin Azad",
