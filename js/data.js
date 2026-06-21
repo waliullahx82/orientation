@@ -913,6 +913,13 @@ export const QUOTES = [
     "color": "#27a85a"
   },
   {
+    "body": "The first year is the best time to enjoy university life, so travel around, explore new places, and try to get to know as many people as possible✨",
+    "name": "MD. Muhaiminul Islam",
+    "reg": "2024331074",
+    "dist": "Barisal",
+    "color": "#F4A024"
+  },
+  {
     "body": "Let’s build a wholesome environment",
     "name": "AHNAF FARHAN OHI",
     "reg": "2024331076",
@@ -925,6 +932,13 @@ export const QUOTES = [
     "reg": "2024331077",
     "dist": "Dhaka",
     "color": "#27a85a"
+  },
+  {
+    "body": "Interest matters most",
+    "name": "MD. ASHIFUL ISLAM ASHIK",
+    "reg": "2024331079",
+    "dist": "Cumilla",
+    "color": "#F4A024"
   },
   {
     "body": "May your uni life be filled with fun experience, adventures, and good vibes!",
